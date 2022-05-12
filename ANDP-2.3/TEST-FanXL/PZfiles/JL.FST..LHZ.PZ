@@ -1,0 +1,39 @@
+* **********************************
+* NETWORK   (KNETWK): JL
+* STATION    (KSTNM): FST
+* LOCATION   (KHOLE):
+* CHANNEL   (KCMPNM): LHZ
+* CREATED           : 2018-09-17T00:29:15
+* START             : 2009-01-01T00:00:00
+* END               : 2223-07-06T14:13:20
+* DESCRIPTION       : Fusongtai,Jilin Province
+* LATITUDE    (deg) : 42.257600 
+* LONGITUDE   (deg) : 127.381000 
+* ELEVATION     (m) : 770.5  
+* DEPTH         (m) : 0.0  
+* DIP         (deg) : 0.0  
+* AZIMUTH     (deg) : 0.0  
+* SAMPLE RATE  (Hz) : 1.0
+* INPUT UNIT        : M
+* OUTPUT UNIT       : COUNTS
+* INSTTYPE          : Guralp CMG-3ESPC Seismometer
+* INSTGAIN          : 1.999990e+03 (M/S)
+* COMMENT           : N/A
+* SENSITIVITY       : 1.258650e+09 (M/S)
+* A0                : 5.715080e+08
+* Site Name         : Fusongtai,Jilin Province
+* Owner             : Jilin Digital Seismic Network
+* **********************************
+ZEROS	3
+	+0.000000e+00	+0.000000e+00
+	+0.000000e+00	+0.000000e+00
+	+0.000000e+00	+0.000000e+00
+POLES	5
+	-7.397840e-02	+7.397840e-02
+	-7.397840e-02	-7.397840e-02
+	-1.004800e+03	+0.000000e+00
+	-5.024000e+02	+0.000000e+00
+	-1.130400e+03	+0.000000e+00
+CONSTANT	+7.193285e+17
+
+

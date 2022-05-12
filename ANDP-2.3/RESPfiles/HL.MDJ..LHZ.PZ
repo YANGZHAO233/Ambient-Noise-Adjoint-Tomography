@@ -1,0 +1,81 @@
+* **********************************
+* NETWORK   (KNETWK): HL
+* STATION    (KSTNM): MDJ
+* LOCATION   (KHOLE):
+* CHANNEL   (KCMPNM): LHZ
+* CREATED           : 2018-09-17T12:01:51
+* START             : 2009-01-01T00:00:00
+* END               : 2010-12-04T16:60:60
+* DESCRIPTION       : Mudanjiang,Heilongjiang Province
+* LATITUDE    (deg) : 44.620000
+* LONGITUDE   (deg) : 129.590000
+* ELEVATION     (m) : 250.0
+* DEPTH         (m) : 0.0
+* DIP         (deg) : 0.0
+* AZIMUTH     (deg) : 0.0
+* SAMPLE RATE  (Hz) : 1.0
+* INPUT UNIT        : M
+* OUTPUT UNIT       : COUNTS
+* INSTTYPE          : Streckeisen STS-2/VBB Seismometer
+* INSTGAIN          : 2.000000e+04 (M/S)
+* COMMENT           : N/A
+* SENSITIVITY       : 1.258600e+10 (M/S)
+* A0                : 5.968060e+07
+* Site Name         : Mudanjiang,Heilongjiang Province
+* Owner             : Heilongjiang Digital Seismic Network
+* **********************************
+ZEROS	3
+	+0.000000e+00	+0.000000e+00
+	+0.000000e+00	+0.000000e+00
+	+0.000000e+00	+0.000000e+00
+POLES	5
+	-3.564700e-02	-3.687900e-02
+	-3.564700e-02	+3.687900e-02
+	-2.513300e+02	+0.000000e+00
+	-1.310400e+02	-4.672900e+02
+	-1.310400e+02	+4.672900e+02
+CONSTANT	+7.511401e+17
+
+
+* **********************************
+* NETWORK   (KNETWK): HL
+* STATION    (KSTNM): MDJ
+* LOCATION   (KHOLE):
+* CHANNEL   (KCMPNM): LHZ
+* CREATED           : 2018-09-17T11:55:04
+* START             : 2010-12-04T16:00:00
+* END               : 2223-07-06T14:13:20
+* DESCRIPTION       : Mudanjiang,Heilongjiang Province
+* LATITUDE    (deg) : 44.620000
+* LONGITUDE   (deg) : 129.590000
+* ELEVATION     (m) : 250.0
+* DEPTH         (m) : 0.0
+* DIP         (deg) : 0.0
+* AZIMUTH     (deg) : 0.0
+* SAMPLE RATE  (Hz) : 1.0
+* INPUT UNIT        : M
+* OUTPUT UNIT       : COUNTS
+* INSTTYPE          : CTS-1V/VBB Seismometer
+* INSTGAIN          : 2.000000e+03 (M/S)
+* COMMENT           : N/A
+* SENSITIVITY       : 1.258650e+09 (M/S)
+* A0                : 2.420600e+20
+* Site Name         : Mudanjiang,Heilongjiang Province
+* Owner             : Heilongjiang Digital Seismic Network
+* **********************************
+ZEROS	3
+	+0.000000e+00	+0.000000e+00
+	+0.000000e+00	+0.000000e+00
+	+0.000000e+00	+0.000000e+00
+POLES	10
+	-3.925370e-02	-3.050710e-02
+	-3.925370e-02	+3.050710e-02
+	-2.443550e+02	-2.443640e+02
+	-2.443550e+02	+2.443640e+02
+	-2.665750e+02	-2.665720e+02
+	-2.665750e+02	+2.665720e+02
+	-3.338100e+02	-8.940850e+01
+	-3.338100e+02	+8.940850e+01
+	-8.944000e+01	-3.338020e+02
+	-8.944000e+01	+3.338020e+02
+CONSTANT	+3.046688e+29

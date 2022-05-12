@@ -1,0 +1,70 @@
+# On branch master
+# Changed but not updated:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#   (commit or discard the untracked or modified content in submodules)
+#
+#	typechange: DATA/CMTSOLUTION
+#	typechange: DATA/FORCESOLUTION
+#	typechange: DATA/Par_file
+#	typechange: DATA/STATIONS
+#	typechange: DATA/STATIONS_ADJOINT
+#	typechange: DATA/observation_grid_to_use_for_gravity.txt
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/absorbing_surface_file_bottom
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/absorbing_surface_file_xmax
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/absorbing_surface_file_xmin
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/absorbing_surface_file_ymax
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/absorbing_surface_file_ymin
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/free_or_absorbing_surface_file_zmax
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/materials_file
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/mesh_file
+#	typechange: EXAMPLES/homogeneous_acoustic/MESH-default/nodes_coords_file
+#	typechange: EXAMPLES/homogeneous_acoustic/homogeneous_halfspace.cfg
+#	typechange: EXAMPLES/homogeneous_acoustic/make_mesh.sh
+#	deleted:    EXAMPLES/homogeneous_halfspace
+#	typechange: EXAMPLES/homogeneous_halfspace_HEX27_elastic_no_absorbing/REF_SEIS/DB.X20.BXZ.semd
+#	typechange: EXAMPLES/homogeneous_halfspace_HEX27_elastic_no_absorbing/REF_SEIS/DB.X30.BXZ.semd
+#	typechange: EXAMPLES/homogeneous_halfspace_HEX27_elastic_no_absorbing/REF_SEIS/DB.X40.BXZ.semd
+#	typechange: EXAMPLES/homogeneous_halfspace_HEX27_elastic_no_absorbing/REF_SEIS/DB.X50.BXZ.semd
+#	typechange: EXAMPLES/homogeneous_halfspace_HEX8_elastic_no_absorbing/create_mesh.py
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/absorbing_surface_file_bottom
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/absorbing_surface_file_xmax
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/absorbing_surface_file_xmin
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/absorbing_surface_file_ymax
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/absorbing_surface_file_ymin
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/free_or_absorbing_surface_file_zmax
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/materials_file
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/mesh_file
+#	typechange: EXAMPLES/homogeneous_poroelastic/MESH-default/nodes_coords_file
+#	deleted:    EXAMPLES/meshfem3D_examples/socal1D/REF_SEIS
+#	typechange: EXAMPLES/noise_tomography/MESH-default/absorbing_surface_file_bottom
+#	typechange: EXAMPLES/noise_tomography/MESH-default/absorbing_surface_file_xmax
+#	typechange: EXAMPLES/noise_tomography/MESH-default/absorbing_surface_file_xmin
+#	typechange: EXAMPLES/noise_tomography/MESH-default/absorbing_surface_file_ymax
+#	typechange: EXAMPLES/noise_tomography/MESH-default/absorbing_surface_file_ymin
+#	typechange: EXAMPLES/noise_tomography/MESH-default/free_or_absorbing_surface_file_zmax
+#	typechange: EXAMPLES/noise_tomography/MESH-default/materials_file
+#	typechange: EXAMPLES/noise_tomography/MESH-default/mesh_file
+#	typechange: EXAMPLES/noise_tomography/MESH-default/nodes_coords_file
+#	typechange: EXAMPLES/noise_tomography/MESH-default/nummaterial_velocity_file
+#	deleted:    MESH-default
+#	typechange: doc/call_trees_of_the_source_code/Doxyfile
+#	deleted:    external_libs/scotch
+#	deleted:    tests/decompose_mesh/DATA
+#	modified:   utils/ADJOINT_TOMOGRAPHY_TOOLS/flexwin (modified content)
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/cg_step/slice_file
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/cg_step/xcombine_vol_data
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/model_pert/slice_file
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/model_pert/xcombine_vol_data
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/model_vp_vs/slice_file
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/smooth/slice_file
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/smooth_update/slice_file
+#	typechange: utils/ADJOINT_TOMOGRAPHY_TOOLS/iterate_adj/cluster/subspace_update/xcombine_vol_data
+#	typechange: utils/lib/asc2sac
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	setup/version.fh
+#	temp
+no changes added to commit (use "git add" and/or "git commit -a")

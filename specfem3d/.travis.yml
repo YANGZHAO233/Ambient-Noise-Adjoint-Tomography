@@ -1,0 +1,168 @@
+# Travis configuration
+#
+# Note: building Fortran code is not supported (yet): see https://docs.travis-ci.com/user/language-specific/
+#       this is using C as a base and installs gfortran in the test environment
+
+language: c
+dist: trusty
+sudo: required
+
+os: linux
+compiler: gcc
+
+env:
+  global:
+    - FC=gfortran
+    - MPIFC=mpif90
+    - CC=gcc
+    - OMP_NUM_THREADS=2
+    - WORKDIR=`pwd`
+
+  matrix:
+    # for test cases, we use
+    #   TEST    - flags used for configuration
+    #   TESTCOV - determines whether or not (0/1) code coverage flags are used
+    #   CUDA    - flag for compilation with CUDA
+    #   CUDA_VERSION - specifies CUDA toolkit version
+
+    # code coverage: mpi, using code coverage flags
+    - TEST="--with-mpi" TESTCOV=1 TESTMAKE=1 CUDA=false
+
+    # code coverage: mpi, using code coverage flags, additional tests
+    - TEST="--with-mpi" TESTCOV=1 TESTMAKE=2 CUDA=false
+
+    # code coverage: no mpi, using code coverage flags
+    - TEST="--without-mpi" TESTCOV=1 TESTMAKE=5 CUDA=false
+
+    # default test with make tests
+    - TEST="" TESTCOV=0 TESTMAKE=0 CUDA=false
+
+    # default example (elastic)
+    - TEST="" TESTCOV=0 TESTMAKE=1 CUDA=false
+
+    # example 2 (acoustic)
+    - TEST="" TESTCOV=0 TESTMAKE=2 CUDA=false
+
+    # example 3 (poroelastic)
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=3 CUDA=false
+
+    # example 4 (internal mesher)
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=4 CUDA=false
+
+    # serial example (acoustic)
+    - TEST="--without-mpi" TESTCOV=0 TESTMAKE=5 CUDA=false
+
+    # debug & double precision (acoustic)
+    - TEST="--enable-double-precision --enable-debug" TESTCOV=0 TESTMAKE=6 CUDA=false
+
+    # debug with bounds-check (elastic)
+    - TEST="--enable-debug" TESTCOV=0 TESTMAKE=7 CUDA=false
+
+    # PML example (acoustic)
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=8 CUDA=false
+
+    # PML example (elastic)
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=9 CUDA=false
+
+    # noise example
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=10 CUDA=false
+
+    # tomographic model example
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=11 CUDA=false
+
+    # acoustic kernel example
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=12 CUDA=false
+
+    # waterlayered example
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=13 CUDA=false
+
+    # elastic example, compilation w/ CUDA and MPI
+    - TEST="--with-cuda=cuda5 --with-mpi" TESTCOV=0 TESTMAKE=14 CUDA=true CUDA_VERSION=6.5-14
+
+    # acoustic example, compilation w/ CUDA
+    - TEST="--with-cuda=cuda5 --without-mpi" TESTCOV=0 TESTMAKE=15 CUDA=true CUDA_VERSION=6.5-14
+
+    # fault example tpv5
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=16 CUDA=false
+
+    # socal example
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=17 CUDA=false
+
+    # socal example w/ 1d_socal
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=18 CUDA=false
+
+    # socal example w/ 1d_prem
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=19 CUDA=false
+
+    # socal example w/ 1d_cascadia
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=20 CUDA=false
+
+    # cavity example
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=21 CUDA=false
+
+    # SEP example
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=22 CUDA=false
+
+    # couple with FK
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=23 CUDA=false
+
+    # layered model w/ point force
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=24 CUDA=false
+
+    # elastic halfspace, no absorbing
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=25 CUDA=false
+
+    # gmsh example w/ LDDRK
+    - TEST="--with-mpi" TESTCOV=0 TESTMAKE=26 CUDA=false
+
+
+before_install:
+  # informations on git
+  - |
+    git --version
+    git rev-parse --verify HEAD
+    git branch -a
+
+  # checks if changes occurred in folders src/ or setup/
+  - |
+    echo "request: Branch($TRAVIS_BRANCH) Pull Request($TRAVIS_PULL_REQUEST) Tag($TRAVIS_TAG)"
+    echo "commit : Commit($TRAVIS_COMMIT) Range($TRAVIS_COMMIT_RANGE)"
+
+  # recommended for MPI projects to unset CC: see https://docs.travis-ci.com/user/languages/c
+  #- test -n $CC && unset CC
+
+  # updates repository
+  - sudo apt-get update
+
+
+install:
+  - bash .travis/run_install.sh
+
+
+script:
+  - bash .travis/run_tests.sh
+
+
+after_success:
+  ###########################################################
+  # code coverage
+  ###########################################################
+  - |
+    if [ "$TESTCOV" == "1" ]; then
+      gcov --version
+      echo `pwd`
+      ls -al obj/
+    fi
+
+  # produces coverage reports (done manually because of different naming for source & object files)
+  - |
+    if [ "$TESTCOV" == "1" ]; then
+      find obj/ -iname '*.o' | sort | awk '{print "gcov -o obj/ "$1;}'
+      # executes gcov-commands
+      find obj/ -iname '*.o' | sort | awk '{print "gcov -o obj/ "$1;}' | sh
+    fi
+
+  # code coverage:
+  # see script : https://github.com/codecov/codecov-bash/blob/master/codecov
+  # see example: https://github.com/codecov/example-fortran/blob/master/.travis.yml
+  - if [ "$TESTCOV" == "1" ]; then bash <(curl -s https://codecov.io/bash) -X gcov; fi
