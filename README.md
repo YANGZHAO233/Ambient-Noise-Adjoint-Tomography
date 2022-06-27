@@ -10,7 +10,7 @@ There are some useful scripts for users in 'scripts'.
 If you use this python package for your own research, please cite the following articles:   
 1）Zhao, Y., Guo, Z., Wang, K., & Yang, Y. J. (2021). A Large Magma Reservoir Beneath the Tengchong Volcano Revealed by Ambient Noise Adjoint Tomography. Journal of Geophysical Research: Solid Earth, 126(7), e2021JB022116.    
 2）Wang, K., Yang, Y., Basini, P., Tong, P., Tape, C., & Liu, Q. (2018). Refined crustal and uppermost mantle structure of southern California by ambient noise adjoint tomography. Geophysical Journal International, 215(2), 844-863.   
-3）Fan, X.L., Guo, Z., Zhao, Y., Chen, Q.F. (2022). Crust and uppermost mantle magma plumbing system beneath Changbaishan intraplate volcano, China/North Korea, revealed by ambient noise adjoint tomography. Geophysical Research Letters, doi:10.1029/2022GL098308, in press.
+3）Fan, X., Guo, Z., Zhao, Y., & Chen, Q. F. (2022). Crust and uppermost mantle magma plumbing system beneath Changbaishan intraplate volcano, China/North Korea, revealed by ambient noise adjoint tomography. Geophysical Research Letters, e2022GL098308.
 
 If you have any questions, please contact zhaoyanginsane@foxmail.com.
 
