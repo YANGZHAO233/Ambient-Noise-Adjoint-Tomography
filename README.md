@@ -1,4 +1,4 @@
-This package is a python pipeline for Ambient Noise Adjoint Tomography based on SPECFEM3D_Cartesian(https://geodynamics.org/resources/specfem3dcartesian).
+This package is a friendly python pipeline for Ambient Noise Adjoint Tomography based on SPECFEM3D_Cartesian(https://geodynamics.org/resources/specfem3dcartesian).
 The modules include ambient noise raw data processing (ANDP-2.3), initial model, forward computation, preprocessing, measurement, adjoint simulation, pre-conditioner, kernel smoothing and model updating.
 
 The source code of SPECFEM3D_Cartesian is placed in 'specfem3d'.   
